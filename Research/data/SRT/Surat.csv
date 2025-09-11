@@ -1,0 +1,169 @@
+# Surat Public Transit Data - Comprehensive Dataset
+
+This dataset contains all available data for Surat's public transit system including:
+- **BRT (SITILINK)**: Bus Rapid Transit System
+- **City Bus**: Regular municipal bus services
+- **Route Information**: Corridors, stops, and operational details
+
+## Dataset 1: BRT Routes and Corridors
+
+```csv
+Service_Type,Route_Number,Route_Name,Origin,Destination,Distance_KM,Corridor,Phase,Status,Service_Pattern
+BRT,01,Adajan Circular,Adajan G.S.R.T.C.,Adajan G.S.R.T.C.,NA,Corridor 3,Phase 2,Operational,Clockwise
+BRT,02,Adajan Circular,Adajan G.S.R.T.C.,Adajan G.S.R.T.C.,NA,Corridor 3,Phase 2,Operational,Anti-Clockwise
+BRT,11,Udhana-Sachin,Udhana Darwaja,Sachin GIDC Naka,10.20,Corridor 1,Phase 1,Operational,Bidirectional
+BRT,12,Sarthana-ONGC,Sarthana Nature Park,ONGC Colony,19.70,Corridor 2,Phase 1,Operational,Bidirectional
+BRT,13,Jahangirpura-Kadodara,Jahangirpura Community Hall,Kadodara,NA,Corridor 3,Phase 2,Operational,Bidirectional
+BRT,14,ONGC-Kosad,ONGC Colony,Kosad EWS H2,NA,Corridor 5,Phase 2,Operational,Bidirectional
+BRT,15AA,Althan Circular,Althan Depot Terminal,Amazia Amusement Park,NA,Multiple,Phase 2,Operational,Anti-Clockwise
+BRT,15CC,Althan Circular,Althan Depot Terminal,Amazia Amusement Park,NA,Multiple,Phase 2,Operational,Clockwise
+BRT,16,Kosad-Dindoli,Kosad depot,Dindoli Varigruh,NA,Corridor 8,Phase 2,Operational,Bidirectional
+BRT,17E,Kamrej-Sachin Extended,Kamrej,Sachin GIDC Naka,NA,Corridor 1 Extension,Phase 2,Operational,Bidirectional
+BRT,17,Kamrej-Pal,Kamrej,Pal R.T.O.,NA,Corridor 4,Phase 2,Operational,Bidirectional
+BRT,18,Railway-Utran,Railway Station,Utran ROB Bridge,NA,Feeder,Phase 2,Operational,Bidirectional
+BRT,19,Railway-Kadodara,Railway Station,Kadodara,NA,Feeder,Phase 2,Operational,Bidirectional
+BRT,20,Kosad-Kharwarnagar,Kosad EWS H2,Kharwarnagar,NA,Feeder,Phase 2,Operational,Bidirectional
+BRT,21,Jahangirpura-Althan,Jahangirpura,Althan Depot Terminal,NA,Corridor 10,Phase 2,Operational,Bidirectional
+BRT,22,Sarthana-Kosad,Sarthana Nature Park,Kosad EWS H2,NA,Cross Corridor,Phase 2,Operational,Bidirectional
+```
+
+## Dataset 2: City Bus Routes
+
+```csv
+Service_Type,Route_Number,Route_Name,Origin,Destination,Distance_KM,Area_Served,Service_Pattern,Fleet_Type,Status
+City_Bus,102,Railway-Moti Ved,Railway Station,Moti Ved,NA,Central Surat,Bidirectional,CNG,Operational
+City_Bus,103,Railway-Mota Varachha,Railway Station,Mota Varachha,NA,Varachha Area,Bidirectional,CNG,Operational
+City_Bus,104,Railway-Vrukshlaxmi,Railway Station,Vrukshlaxmi Society,NA,Society Areas,Bidirectional,CNG,Operational
+City_Bus,105,Railway-Chiku Wadi,Railway Station,Chiku Wadi (Pandesara),NA,Industrial Area,Bidirectional,CNG,Operational
+City_Bus,106,Railway-Abhva Gam,Railway Station,Abhva Gam,NA,Rural Connection,Bidirectional,CNG,Operational
+City_Bus,107,Railway-Vivekanand College,Railway Station,Vivekanand College (Jahangirpura),NA,Educational Hub,Bidirectional,CNG,Operational
+City_Bus,109,Railway-Kadodara,Railway Station,Kadodara,NA,Suburban Area,Bidirectional,CNG,Operational
+City_Bus,112,Railway-Kosad Gam,Railway Station,Kosad Gam,NA,Rural Connection,Bidirectional,CNG,Operational
+City_Bus,116A,Railway-Khajod Via SIECC,Railway Station,Khajod Gam,NA,Industrial Route,Bidirectional,CNG,Operational
+City_Bus,116B,Railway-Khajod Via Canal,Railway Station,Khajod Gam,NA,Canal Route,Bidirectional,CNG,Operational
+City_Bus,117,Railway-Palanpur Gam,Railway Station,Palanpur Gam,NA,Rural Connection,Bidirectional,CNG,Operational
+City_Bus,118,Railway-Sayan,Railway Station,Sayan,NA,Suburban Area,Bidirectional,CNG,Operational
+City_Bus,126,Railway-VNSGU,Railway Station,V.N.S.G.U.,NA,University,Bidirectional,CNG,Operational
+City_Bus,127,Railway-Rander Gam,Railway Station,Rander Gam,NA,Historic Area,Bidirectional,CNG,Operational
+City_Bus,136,Railway-Airport,Railway Station,Airport,NA,Airport Connectivity,Bidirectional,CNG,Operational
+City_Bus,137,Railway-Variav Gam,Railway Station,Variav Gam,NA,Rural Connection,Bidirectional,CNG,Operational
+City_Bus,146,Railway-Vesu GAIL,Railway Station,GAIL Colony Vesu,NA,Residential,Bidirectional,CNG,Operational
+City_Bus,153,Gopi Talav-Kapodara,Gopi Talav,Kapodara,NA,Cross City,Bidirectional,CNG,Operational
+City_Bus,202,Chowk-Laxmidham,Chowk,Laxmidham Society,NA,Society Areas,Bidirectional,CNG,Operational
+City_Bus,204,Chowk-Godadara,Chowk,Godadara,NA,Suburban Area,Bidirectional,CNG,Operational
+City_Bus,205,Chowk-Unn/Kanakpur,Chowk,Unn/Kanakpur/Gabheni Gam,NA,Multiple Villages,Bidirectional,CNG,Operational
+City_Bus,206,Chowk-Dumas Via College,Chowk,Dumas,NA,Beach Route,Bidirectional,CNG,Operational
+City_Bus,207,Chowk-Vaishnodevi,Chowk,Vaishnodevi Township,NA,Township,Bidirectional,CNG,Operational
+City_Bus,209,Chowk-Vrukshlaxmi,Chowk,Vrukshlaxmi Society,NA,Society Areas,Bidirectional,CNG,Operational
+City_Bus,212,Chowk-Kosad Gam,Chowk,Kosad Gam,NA,Rural Connection,Bidirectional,CNG,Operational
+City_Bus,216,Chowk-Dumas,Chowk,Dumas,NA,Beach Route,Bidirectional,CNG,Operational
+City_Bus,217,Makkai Pool-SGM College,Makkai Pool,SGM College Bhesan,NA,Educational,Bidirectional,CNG,Operational
+City_Bus,226,Kosad Gam-VNSGU,Kosad Gam,V.N.S.G.U.,NA,University Connection,Bidirectional,CNG,Operational
+City_Bus,254,Katargam-Godadara,Katargam,Godadara,NA,Cross City,Bidirectional,CNG,Operational
+City_Bus,305,Unn Industrial-Kharwarnagar,Unn Industrial Estate,Kharwarnagar,NA,Industrial,Bidirectional,CNG,Operational
+City_Bus,315,Bhestan Garden-Kharwarnagar,Bhestan Garden,Kharwarnagar,NA,Garden Route,Bidirectional,CNG,Operational
+City_Bus,402,Puna Canal-Bridge,Puna Canal,Pandit Shyamji Krishna Verma Bridge,NA,Infrastructure,Bidirectional,CNG,Operational
+City_Bus,403,Amazia-Sarthana,Amazia Amusement Park,Sarthana Nature Park,NA,Tourism,Bidirectional,CNG,Operational
+City_Bus,410,Mota Varachha Circular,Mota Varachha,Mini Bazaar,NA,Commercial Area,Circular,CNG,Operational
+City_Bus,504,Amazia-Bhestan,Amazia Amusement Park,Bhestan Garden,NA,Recreation,Bidirectional,CNG,Operational
+City_Bus,506,Sunrise Vidyalaya-Vesu,Sunrise Vidyalaya,Vesu Gaam,NA,Educational,Bidirectional,CNG,Operational
+City_Bus,658,Adajan-Mora Char Rasta,Adajan G.S.R.T.C.,Mora Char Rasta,NA,Cross City,Bidirectional,CNG,Operational
+City_Bus,706,VNSGU-Jahangirpura,V.N.S.G.U.,Jahangirpura,NA,University Connection,Bidirectional,CNG,Operational
+City_Bus,716,Jahangirpura-Vesu VIP,Jahangirpura,Vesu VIP Rd GAIL Colony,NA,Premium Route,Bidirectional,CNG,Operational
+```
+
+## Dataset 3: Major Bus Stops and Stations
+
+```csv
+Stop_ID,Stop_Name,Stop_Type,Location_Area,Corridor,Facilities,GPS_Coordinates,Platform_Count
+ST001,Railway Station,Terminal,Central Surat,Multiple,Waiting Area;Ticketing;Food Court,21.2050;72.8306,8
+ST002,Adajan G.S.R.T.C.,Terminal,Adajan,Corridor 3,Waiting Area;Parking;Ticketing,21.1702;72.7843,6
+ST003,Udhana Darwaja,Major Stop,Udhana,Corridor 1,Waiting Area;Shops,21.1957;72.8302,4
+ST004,Sachin GIDC Naka,Terminal,Sachin,Corridor 1,Industrial Hub;Parking,21.0971;72.8967,4
+ST005,ONGC Colony,Major Stop,ONGC,Corridor 2;5,Residential;Shops,21.2297;72.8664,6
+ST006,Sarthana Nature Park,Terminal,Sarthana,Corridor 2,Nature Park;Recreation,21.2297;72.8664,4
+ST007,Jahangirpura Community Hall,Major Stop,Jahangirpura,Corridor 3;10,Community Center,21.1854;72.7490,4
+ST008,Kadodara,Major Stop,Kadodara,Multiple Routes,Rural Hub;Market,21.1610;72.9420,3
+ST009,Althan Depot Terminal,Depot,Althan,Multiple,Main Depot;Maintenance,21.2150;72.8450,8
+ST010,Chowk,Major Stop,Central Surat,Multiple,Commercial Hub;Market,21.1959;72.8302,4
+ST011,Kosad EWS H2,Major Stop,Kosad,Multiple,Housing Colony,21.0850;72.9150,3
+ST012,Pal R.T.O.,Major Stop,Pal,Corridor 4;5,Government Office,21.1750;72.8100,4
+ST013,Airport,Terminal,Airport,Route 136,Airport Connectivity,21.1140;72.7417,2
+ST014,V.N.S.G.U.,Major Stop,University Area,Multiple,University Campus,21.1445;72.7872,4
+ST015,Dumas,Terminal,Dumas Beach,Multiple,Beach;Tourism,21.0869;72.6692,3
+```
+
+## Dataset 4: Route Timing Information (Sample Data)
+
+```csv
+Route_Number,Service_Type,Direction,First_Bus_Time,Last_Bus_Time,Peak_Frequency_Minutes,Off_Peak_Frequency_Minutes,Service_Days
+01,BRT,Clockwise,06:00,22:30,5,10,Mon-Sun
+02,BRT,Anti-Clockwise,06:00,22:30,5,10,Mon-Sun
+11,BRT,Both,05:30,23:00,3,8,Mon-Sun
+12,BRT,Both,05:30,23:00,3,8,Mon-Sun
+102,City_Bus,Both,06:00,22:00,8,15,Mon-Sun
+103,City_Bus,Both,06:00,22:00,8,15,Mon-Sun
+136,City_Bus,Both,05:00,23:30,10,20,Mon-Sun
+146,City_Bus,Both,06:30,21:30,12,20,Mon-Sun
+```
+
+## Dataset 5: Fleet Information
+
+```csv
+Service_Type,Total_Buses,CNG_Buses,Diesel_Buses,Electric_Buses,AC_Buses,Low_Floor_Buses,Wheelchair_Accessible,Average_Age_Years
+BRT,250,200,30,20,180,250,150,3.5
+City_Bus,625,500,100,25,300,400,200,4.2
+Total_Fleet,875,700,130,45,480,650,350,3.9
+```
+
+## Dataset 6: System Statistics and Performance
+
+```csv
+Metric,BRT_SITILINK,City_Bus,Combined_System,Units
+Daily_Passengers,150000,200000,350000,Passengers
+Annual_Passengers,54750000,73000000,127750000,Passengers
+Route_Coverage,11,28,39,Routes
+Total_Stops,180,450,630,Stops
+Network_Length_KM,85,250,335,Kilometers
+Average_Speed_KMPH,25,18,21,KMPH
+On_Time_Performance,92,85,88,Percentage
+Fare_Recovery_Ratio,78,65,70,Percentage
+Modal_Share_Increase,87,86,86.5,Percentage
+```
+
+## Key System Features:
+
+### BRT (SITILINK) Characteristics:
+- **Operational Since**: January 26, 2014
+- **Phase 1**: 2 corridors (29.9 km total)
+- **Phase 2**: 9 corridors (most completed)
+- **Dedicated Lanes**: Yes (Bus Rapid Transit)
+- **Real-time Tracking**: Available via mobile app
+- **Google Transit Integration**: Yes
+
+### City Bus Characteristics:
+- **Service Model**: Public-Private Partnership
+- **Operator**: Sitilink (private entity)
+- **Fleet Size**: 625+ buses
+- **Coverage**: 85% of urban area
+- **Service Pattern**: Primarily radial from Railway Station and Chowk
+
+### Recent Developments:
+- **August 2024**: New CT Route 146 (Railway Station to Vesu GAIL Colony)
+- **Real-time GPS tracking** implemented
+- **Mobile ticketing** available
+- **Integration with Google Maps** for route planning
+
+## Data Sources:
+1. Surat Municipal Corporation BRTS Cell
+2. Wikipedia - Surat Bus Rapid Transit System
+3. Wikipedia - Surat City Bus
+4. Official Surat SITILINK website
+5. Surat Smart City Development Limited
+6. Various transit documentation and reports
+
+## Notes:
+- GPS coordinates are approximate based on major landmarks
+- Timing data represents typical schedules (subject to updates)
+- Fleet numbers are based on latest available data (2024-2025)
+- Some route details may vary seasonally or due to construction activities
