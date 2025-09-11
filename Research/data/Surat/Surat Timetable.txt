@@ -1,0 +1,33 @@
+=== ENHANCED BRTS TIMETABLE EXTRACTION REPORT ===
+Generated: 2025-09-11 20:41:16
+Source: https://www.suratsitilink.org/TimeTable.aspx
+
+DATA EXTRACTION SUMMARY:
+Total Records: 87
+Unique Services: 85
+Vehicle Types: {'BRT'}
+Data Sources: {'select_dropdown', 'table'}
+
+WEBSITE STRUCTURE ANALYSIS:
+Tables: 1
+Forms: 2
+Selects: 3
+Divs With Class: 79
+Scripts: 43
+Time Patterns: 0
+Route Keywords: 17
+
+TABLE ANALYSIS:
+Table 0: 86 rows, Headers: ['Vehicle Type', 'Service No.', 'Origin Stop', 'Destination Stop']
+
+SAMPLE DATA (First 10 records):
+ 1. 11       | UDHNA DARWAZA                  → SACHIN G.I.D.C.               
+ 2. 12       | ONGC COLONY                    → SARTHANA NATURE PARK BRT      
+ 3. 12B      | BHAGWATI INDUSTRIAL ESTATE     → KHARWAR NAGAR                 
+ 4. 13       | JAHANGIRPURA COMMUNITY HALL    → KADODARA                      
+ 5. 14       | ONGC COLONY                    → KOSAD EWS H2                  
+ 6. 15AA     | ALTHAN DEPOT/TERMINAL          → ALTHAN DEPOT/TERMINAL         
+ 7. 15CC     | ALTHAN DEPOT/TERMINAL          → ALTHAN DEPOT/TERMINAL         
+ 8. 16       | KOSAD DEPOT                    → PANDESARA GIDC                
+ 9. 17A      | KAMREJ TERMINAL                → PAL R.T.O.                    
+10. 18       | RAILWAY STATION TER            → UTRAN-R.O.B BRIDGE            
