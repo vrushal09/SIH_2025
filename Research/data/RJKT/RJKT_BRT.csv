@@ -1,0 +1,118 @@
+Route_ID,Bus_Number,Route_Type,Corridor_Name,Direction,Origin_Stop,Destination_Stop,Stop_Number,Stop_Name,Stop_Type,Zone,Service_Days,Distance_KM,Estimated_Time,Coordinates_Lat,Coordinates_Long,Facilities,Connection_Routes
+1,1,Regular,,,Saurastra University,Trikon Baug,1,Saurastra University,Terminal,University Zone,Daily,,,,,University Campus,"7,9,40,47"
+1,1,Regular,,,Trikon Baug,Saurastra University,1,Trikon Baug,Major Hub,Central Zone,Daily,,,,,Shopping Complex,"1,27,30,46,57"
+7,7,Regular,,,Bajrangvadi Circle,Bhaktinagar Circle,1,Bajrangvadi Circle,Circle,North Zone,Daily,,,,,,"7,Green Corridor"
+7,7,Regular,,,Bhaktinagar Circle,Bajrangvadi Circle,1,Bhaktinagar Circle,Circle,Central Zone,Daily,,,,,,"7,36,Green Corridor"
+8,8,Regular,,,Greenland Chokdi,Labhubhai Engineering College,1,Greenland Chokdi,Junction,South Zone,Daily,,,,,,"8"
+8,8,Regular,,,Labhubhai Engineering College,Greenland Chokdi,1,Labhubhai Engineering College,Terminal,Education Zone,Daily,,,,,College Campus,"8"
+9,9,Regular,,,Arpit Eng. College(Hadala),Saurastra University,1,Arpit Eng. College(Hadala),Terminal,Education Zone,Daily,,,,,College Campus,"9,46"
+9,9,Regular,,,Saurastra University,Arpit Eng. College,1,Saurastra University,Terminal,University Zone,Daily,,,,,University Campus,"1,9,40,47"
+13,13,Regular,,,Kothariya Chokdi,Lal Bahadur shastri Avas,1,Kothariya Chokdi,Junction,East Zone,Daily,,,,,,"13,54,Green Corridor"
+13,13,Regular,,,Lal Bahadur shastri Avas,Kothariya Chokdi,1,Lal Bahadur shastri Avas,Residential,East Zone,Daily,,,,,Housing Complex,"13"
+20,20,Regular,,,Ghanteshvar S.R.P Camp,Shapar Veraval,1,Ghanteshvar S.R.P Camp,Government,North Zone,Daily,,,,,Police Complex,"20,54"
+20,20,Regular,,,Shapar Veraval,Ghanteshvar S.R.P Camp,1,Shapar Veraval,Village,North Zone,Daily,,,,,,"20"
+21,21,Regular,,,Marketing Yard,Shantiniketan aveue,1,Marketing Yard,Commercial,West Zone,Daily,,,,,Market Area,"21"
+21,21,Regular,,,Shantiniketan aveue,Marketing Yard,1,Shantiniketan aveue,Residential,South Zone,Daily,,,,,Housing Society,"21"
+27,27,Regular,,,Raiyadhar Slam Quarter,Trikon Baug,1,Raiyadhar Slam Quarter,Residential,East Zone,Daily,,,,,Government Housing,"27"
+27,27,Regular,,,Trikon Baug,Raiyadhar Slam Quarter,1,Trikon Baug,Major Hub,Central Zone,Daily,,,,,Shopping Complex,"1,27,30,46,57"
+28,28,Regular,,,Gujarat Housing Quarter,Jivraj Park,1,Gujarat Housing Quarter,Residential,West Zone,Daily,,,,,Government Housing,"28"
+28,28,Regular,,,Jivraj Park,Gujarat Housing Quarter,1,Jivraj Park,Park,West Zone,Daily,,,,,Recreation Area,"28"
+30,30,Circular,,,Trikon Baug Circular - 7,Trikon Baug,1,Trikon Baug Circular - 7,Circular,Central Zone,Daily,,,,,Circular Route,"30"
+30,30,Circular,,,Trikon Baug,Trikon Baug Circular - 7,1,Trikon Baug,Major Hub,Central Zone,Daily,,,,,Shopping Complex,"1,27,30,46,57"
+33,33,Special,,,Ashapura Mandir(Theb Chada gam),Parsananagar (Only Sunday),1,Ashapura Mandir(Theb Chada gam),Religious,Rural Zone,Sunday Only,,,,,Temple,"33"
+33,33,Special,,,Parsananagar,Ashapura Mandir(Theb Chada gam),1,Parsananagar,Residential,North Zone,Sunday Only,,,,,Housing Area,"33"
+36,36,Regular,,,Bhaktinagar Circle,Nyara Gam Chokdi,1,Bhaktinagar Circle,Circle,Central Zone,Daily,,,,,,"7,36,Green Corridor"
+36,36,Regular,,,Nyara Gam Chokdi,Bhaktinagar Circle,1,Nyara Gam Chokdi,Village,North Zone,Daily,,,,,,"36"
+37,37,Regular,,,Chhatrapati Shivaji Township,Vinodnagar,1,Chhatrapati Shivaji Township,Residential,East Zone,Daily,,,,,Housing Society,"37"
+37,37,Regular,,,Vinodnagar,Chhatrapati Shivaji Township,1,Vinodnagar,Residential,South Zone,Daily,,,,,Housing Area,"37"
+40,40,Regular,,,Santoshinagar,Saurastra University,1,Santoshinagar,Residential,South Zone,Daily,,,,,Housing Area,"40"
+40,40,Regular,,,Saurastra University,Santoshinagar,1,Saurastra University,Terminal,University Zone,Daily,,,,,University Campus,"1,9,40,47"
+43,43,Regular,,,Akshar Vatika(Mavdi),Om Resi.(Morbi Road Crossing),1,Akshar Vatika(Mavdi),Residential,South Zone,Daily,,,,,Housing Society,"43"
+43,43,Regular,,,Om Resi.(Morbi Road Crossing),Akshar Vatika(Mavdi),1,Om Resi.(Morbi Road Crossing),Residential,East Zone,Daily,,,,,Highway Junction,"43"
+46,46,Regular,,,Arpit Eng. College(Hadala),Trikon Baugh,1,Arpit Eng. College(Hadala),Terminal,Education Zone,Daily,,,,,College Campus,"9,46"
+46,46,Regular,,,Trikon Baugh,Arpit Eng . College,1,Trikon Baugh,Major Hub,Central Zone,Daily,,,,,Shopping Complex,"1,27,30,46,57"
+47,47,Regular,,,Kothariyagam,Saurastra University,1,Kothariyagam,Village,East Zone,Daily,,,,,,"47"
+47,47,Regular,,,Saurastra University,kothariyagam,1,Saurastra University,Terminal,University Zone,Daily,,,,,University Campus,"1,9,40,47"
+54,54,Regular,,,Ghanteshvar S.R.P Camp,Kothariya Chokdi,1,Ghanteshvar S.R.P Camp,Government,North Zone,Daily,,,,,Police Complex,"20,54"
+54,54,Regular,,,Kothariya Chokdi,Ghanteshvar S.R.P Camp,1,Kothariya Chokdi,Junction,East Zone,Daily,,,,,,"13,54,Green Corridor"
+57,57,Regular,,,Government Eng. College,Trikon Baug,1,Government Eng. College,Terminal,Education Zone,Daily,,,,,College Campus,"57"
+57,57,Regular,,,Trikon Baug,Government Eng. College,1,Trikon Baug,Major Hub,Central Zone,Daily,,,,,Shopping Complex,"1,27,30,46,57"
+BRTS-Blue,Blue Line,BRTS,Blue Corridor,Clockwise,Jamnagar Crossroad,Gondal Crossroad,1,Jamnagar Crossroad,Highway Junction,North Zone,Daily,10.7,45,,,BRTS Station,Blue BRTS
+BRTS-Blue,Blue Line,BRTS,Blue Corridor,Anti-Clockwise,Gondal Crossroad,Jamnagar Crossroad,1,Gondal Crossroad,Highway Junction,South Zone,Daily,10.7,45,,,BRTS Station,Blue BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,1,Kothriya Road Octroi Naka,Terminal,South Zone,Daily,16.5,60,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,2,Nanda Hall Circle,Circle,South Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,3,Dev Para Chowk,Junction,South Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,4,Nilkanth Cinema,Entertainment,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,5,Sorthiya Wadi Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,6,Bhakti Nagar Circle,Circle,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,7,Makkam Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,8,Satyvijay patel ice Cream Chowk,Commercial,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,9,Lodhawad Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,10,Malaviya Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,11,Limda Chowk,Junction,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,12,Stock Exchange,Commercial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,13,Chaudhary High School,Education,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,14,Civil Hospital,Medical,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,15,Morbi House,Commercial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,16,Press Colony,Residential,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,17,I.O.C.,Industrial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Northbound,Kothriya Road Octroi Naka,Jamnagar Road & Ring Road Crossing,18,Jamnagar Road & Ring Road Crossing,Highway Junction,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,1,Jamnagar Road & Ring Road Crossing,Highway Junction,North Zone,Daily,16.5,60,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,2,I.O.C.,Industrial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,3,Press Colony,Residential,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,4,Morbi House,Commercial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,5,Civil Hospital,Medical,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,6,Chaudhary High School,Education,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,7,Stock Exchange,Commercial,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,8,Limda Chowk,Junction,North Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,9,Malaviya Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,10,Lodhawad Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,11,Satyvijay patel ice Cream Chowk,Commercial,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,12,Makkam Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,13,Bhakti Nagar Circle,Circle,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,14,Sorthiya Wadi Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,15,Nilkanth Cinema,Entertainment,Central Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,16,Dev Para Chowk,Junction,South Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,17,Nanda Hall Circle,Circle,South Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Green,Green Line,BRTS,Green Corridor (North-South),Southbound,Jamnagar Road & Ring Road Crossing,Kothriya Road Octroi Naka,18,Kothriya Road Octroi Naka,Terminal,South Zone,Daily,,,,,BRTS Station,Green BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,1,Kalawad Road.Octroi Naka,Terminal,West Zone,Daily,16.5,60,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,2,A.G. Society,Residential,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,3,Pushkar Dham,Religious,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,4,B.T.Savani Hospital/University,Medical/Education,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,5,Gangotry Park,Recreation,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,6,Raiya Village,Village,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,7,Aallap Green City,Residential,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,8,Kevallam Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,9,Raiya Circle,Circle,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,10,Brahmsamaj Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,11,Hanuman Madhi Chowk,Religious,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,12,Amrapali Cinema,Entertainment,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,13,Kishan Para Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,14,Jilla Panchayat Chowk,Government,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,15,Bahumali Seva Sadan,Social Services,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,16,Chaudhry High School Chowk,Education,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,17,Civil Hospital Chowk,Medical,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,18,Delux cinema,Entertainment,East Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,19,Sadguru Ashram,Religious,East Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Eastbound,Kalawad Road.Octroi Naka,Ahmedabad Road & Ring Road Crossing,20,Ahmedabad Road & Ring Road Crossing,Highway Junction,East Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,13,Kevallam Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,14,Aallap Green City,Residential,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,15,Raiya Village,Village,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,16,Gangotry Park,Recreation,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,17,B.T.Savani Hospital/University,Medical/Education,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,18,Pushkar Dham,Religious,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,19,A.G. Society,Residential,West Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,20,Kalawad Road.Octroi Naka,Terminal,West Zone,Daily,,,,,BRTS Station,Red BRTSd & Ring Road Crossing,Kalawad Road.Octroi Naka,1,Ahmedabad Road & Ring Road Crossing,Highway Junction,East Zone,Daily,16.5,60,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,2,Sadguru Ashram,Religious,East Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,3,Delux cinema,Entertainment,East Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,4,Civil Hospital Chowk,Medical,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,5,Chaudhry High School Chowk,Education,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,6,Bahumali Seva Sadan,Social Services,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,7,Jilla Panchayat Chowk,Government,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,8,Kishan Para Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,9,Amrapali Cinema,Entertainment,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,10,Hanuman Madhi Chowk,Religious,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,11,Brahmsamaj Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,12,Raiya Circle,Circle,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Road & Ring Road Crossing,Kalawad Road.Octroi Naka,13,Kevallam Chowk,Junction,Central Zone,Daily,,,,,BRTS Station,Red BRTS
+BRTS-Red,Red Line,BRTS,Red Corridor (East-West),Westbound,Ahmedabad Roa

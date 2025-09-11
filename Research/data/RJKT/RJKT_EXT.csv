@@ -1,0 +1,75 @@
+Category,Attribute,Value,Unit,Description,Source
+System,Service_Name,Rajkot Mass Transport Service (RMTS),,Official name of the transit system,Official Website
+System,Alternative_Name,Rajpath,,Alternative name for BRTS system,Wikipedia
+System,City,Rajkot,,City where service operates,Official Website
+System,State,Gujarat,,State location,Official Website
+System,Country,India,,Country location,Official Website
+System,Operator,Rajkot Rajpath Ltd.,,Operating company,Wikipedia
+System,Owner,Rajkot Municipal Corporation,,Owning authority,Wikipedia
+System,Service_Type,Bus Rapid Transit + Regular City Bus,,Type of transit service,Wikipedia
+System,Launch_Year,2012,,Year service started,Wikipedia
+System,Contact_Phone,+91 7096088188,,Official contact number,Official Website
+System,Contact_Email,info@rajkotmts.com,,Official email,Official Website
+System,Website,https://rmts.somee.com/,,Official website,Official Website
+System,Mobile_App,RMTS BRTS Time Table,,Mobile application name,Play Store
+Infrastructure,Total_BRTS_Length_Planned,63,km,Total planned BRTS network length,Wikipedia
+Infrastructure,Phase1_Length,29,km,Phase 1 BRTS length on Ring Road,Wikipedia
+Infrastructure,Blue_Corridor_Pilot,10.7,km,Initial pilot stretch length,Wikipedia
+Infrastructure,Blue_Corridor_Total_Stops,18,,Number of stops in pilot stretch,Wikipedia
+Infrastructure,Green_Corridor_Length,16.5,km,North-South corridor length,Wikipedia
+Infrastructure,Green_Corridor_Stops,18,,Number of stops in Green corridor,Wikipedia
+Infrastructure,Red_Corridor_Length,16.5,km,East-West corridor length,Wikipedia
+Infrastructure,Red_Corridor_Stops,20,,Number of stops in Red corridor,Wikipedia
+Infrastructure,Ring_Road_Width,45,meters,Width of Ring Road,Wikipedia
+Infrastructure,NH8B_Section_Width,60,meters,Width of National Highway 8B section,Wikipedia
+Fleet,Total_Buses_Planned,156,,Total buses planned for all corridors,Wikipedia
+Fleet,Blue_Corridor_Buses,70,,Buses allocated to Blue corridor,Wikipedia
+Fleet,Green_Corridor_Buses,25,,Buses allocated to Green corridor,Wikipedia
+Fleet,Red_Corridor_Buses,61,,Buses allocated to Red corridor,Wikipedia
+Fleet,Bus_Fuel_Type,CNG,,Fuel type for buses,Wikipedia
+Fleet,Bus_Features,GPS tracking,,Special features in buses,Wikipedia
+Fleet,Door_Type,Right side doors,,Bus door configuration for BRTS,Wikipedia
+Fleet,Emission_Standard,Latest India norms,,Emission compliance,Wikipedia
+Funding,Total_Project_Cost,110,Crores INR,Total cost for pilot stretch,Wikipedia
+Funding,Central_Govt_Share,50,percent,Government of India contribution,Wikipedia
+Funding,State_Govt_Share,20,percent,Government of Gujarat contribution,Wikipedia
+Funding,Municipal_Share,30,percent,Rajkot Municipal Corporation share,Wikipedia
+Funding,Central_Sanctioned,55,Crores INR,Amount sanctioned by Central Government,Wikipedia
+Funding,Funding_Source,JNNURM,,Jawaharlal Nehru National Urban Renewal Mission,Wikipedia
+Routes,Regular_Bus_Routes,18,,Number of regular city bus routes,Official Website
+Routes,BRTS_Corridors,3,,Number of BRTS corridors,Wikipedia
+Routes,Circular_Routes,1,,Number of circular routes,Official Website
+Routes,Special_Routes,1,,Routes with special schedules (Sunday only),Official Website
+Routes,Total_Active_Routes,22,,Total number of active routes,Calculated
+Service,Operating_Days,Daily,,Service frequency for regular routes,Official Website
+Service,Special_Service_Days,Sunday Only,,Special service schedule,Official Website
+Service,Real_Time_Tracking,Available,,Live bus tracking availability,Official Website
+Service,Mobile_Ticketing,Available,,Mobile ticketing system,Official Website
+Service,Offline_App_Support,Yes,,Offline functionality in mobile app,Play Store
+Coverage,Educational_Institutions,4,,Major colleges/universities served,Route Analysis
+Coverage,Hospitals,Multiple,,Medical facilities connected,Wikipedia
+Coverage,Commercial_Areas,Multiple,,Shopping and business areas,Route Analysis
+Coverage,Residential_Zones,Multiple,,Housing areas and societies,Route Analysis
+Coverage,Government_Offices,Multiple,,Administrative buildings,Wikipedia
+Coverage,Entertainment_Centers,Multiple,,Cinema halls and recreation,Wikipedia
+Coverage,Religious_Places,Multiple,,Temples and religious sites,Wikipedia
+Zones,North_Zone,Coverage,,Northern part of city,Route Analysis
+Zones,South_Zone,Coverage,,Southern part of city,Route Analysis
+Zones,East_Zone,Coverage,,Eastern part of city,Route Analysis
+Zones,West_Zone,Coverage,,Western part of city,Route Analysis
+Zones,Central_Zone,Coverage,,Central business district,Route Analysis
+Zones,University_Zone,Coverage,,Educational institution area,Route Analysis
+Technology,GPS_Tracking,Implemented,,Real-time bus location tracking,Wikipedia
+Technology,Communication_System,Implemented,,Bus-to-control communication,Wikipedia
+Technology,Interactive_Maps,Available,,Web-based route mapping,Official Website
+Technology,Mobile_Apps,Available,,Android application available,Play Store
+Technology,Web_Services,Available,,Online route planning,Official Website
+Connectivity,Highway_Connections,NH 8B,,National Highway connectivity,Wikipedia
+Connectivity,Ring_Road_Integration,Complete,,Integration with city ring road,Wikipedia
+Connectivity,Airport_Connection,Planned,,Airport connectivity plans,Infrastructure
+Connectivity,Railway_Station,Connected,,Railway station accessibility,Route Analysis
+Development,Phase1_Status,Completed,,First phase implementation status,Wikipedia
+Development,Phase2_Status,Planned,,Second phase development,Wikipedia
+Development,Phase3_Status,Planned,,Third phase expansion,Wikipedia
+Development,Future_Corridors,2,,Additional corridors planned,Wikipedia
+Development,Timeline,2007-2011,,Phase 1 development period,Wikipedia
