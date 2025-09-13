@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test JSON Loading</title>
+</head>
+<body>
+    <h1>Testing JSON Data Loading</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testJSONLoading() {
+            try {
+                const response = await fetch('./unified_transit_data.json');
+                const data = await response.json();
+                
+                document.getElementById('results').innerHTML = `
+                    <h2>✅ JSON Loading Test Results:</h2>
+                    <p><strong>Total Cities:</strong> ${Object.keys(data.cities).length}</p>
+                    <p><strong>Cities:</strong> ${Object.keys(data.cities).join(', ')}</p>
+                    <p><strong>Created:</strong> ${data.metadata.created_date}</p>
+                    
+                    <h3>Route Counts by City:</h3>
+                    ${Object.entries(data.cities).map(([cityKey, cityData]) => {
+                        let totalRoutes = 0;
+                        Object.values(cityData.transit_systems).forEach(system => {
+                            if (system.routes) totalRoutes += system.routes.length;
+                        });
+                        return `<p><strong>${cityData.city_name}:</strong> ${totalRoutes} routes</p>`;
+                    }).join('')}
+                `;
+                
+            } catch (error) {
+                document.getElementById('results').innerHTML = 
+                    `<h2>❌ Error loading JSON:</h2><p>${error.message}</p>`;
+            }
+        }
+        
+        testJSONLoading();
+    </script>
+</body>
+</html>

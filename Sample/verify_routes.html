@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Route Count Verification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">🔍 Route Count Verification</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">📊 JSON Data Analysis</h2>
+                <div id="json-analysis">Loading...</div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">🎯 Parsed Route Breakdown</h2>
+                <div id="parsed-analysis">Loading...</div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow mt-6">
+            <h2 class="text-xl font-semibold mb-4">📋 Sample Routes (First 10)</h2>
+            <div id="sample-routes" class="text-sm">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        async function analyzeRoutes() {
+            try {
+                // Load JSON data
+                const response = await fetch('./unified_transit_data.json');
+                const data = await response.json();
+                
+                // Analyze JSON structure
+                let jsonAnalysis = '<div class="space-y-3">';
+                Object.entries(data.cities).forEach(([cityKey, cityData]) => {
+                    jsonAnalysis += `<div class="border-l-4 border-blue-500 pl-3">`;
+                    jsonAnalysis += `<h3 class="font-semibold">${cityData.city_name}</h3>`;
+                    
+                    Object.entries(cityData.transit_systems).forEach(([systemKey, systemData]) => {
+                        const routeCount = systemData.routes ? systemData.routes.length : 0;
+                        jsonAnalysis += `<p class="text-sm text-gray-600">${systemKey}: ${routeCount} routes</p>`;
+                    });
+                    jsonAnalysis += `</div>`;
+                });
+                jsonAnalysis += '</div>';
+                document.getElementById('json-analysis').innerHTML = jsonAnalysis;
+                
+                // Parse routes using the same logic as the main app
+                let allRoutes = [];
+                
+                // Parse Ahmedabad data
+                if (data.cities.ahmedabad) {
+                    const amdCity = data.cities.ahmedabad;
+                    
+                    if (amdCity.transit_systems.AMTS && amdCity.transit_systems.AMTS.routes) {
+                        amdCity.transit_systems.AMTS.routes.forEach((route, index) => {
+                            if (route.startName && route.endName) {
+                                allRoutes.push({
+                                    city: 'amd',
+                                    routeCode: route.routeCode || route.customerRouteCode || 'N/A',
+                                    from: route.startName,
+                                    to: route.endName,
+                                    type: 'AMTS'
+                                });
+                            }
+                        });
+                    }
+
+                    if (amdCity.transit_systems.BRT && amdCity.transit_systems.BRT.routes) {
+                        amdCity.transit_systems.BRT.routes.forEach((route, index) => {
+                            if (route.startName && route.endName) {
+                                allRoutes.push({
+                                    city: 'amd',
+                                    routeCode: route.routeCode || route.customerRouteCode || 'N/A',
+                                    from: route.startName,
+                                    to: route.endName,
+                                    type: 'BRT'
+                                });
+                            }
+                        });
+                    }
+                }
+
+                // Parse Rajkot data
+                if (data.cities.rajkot && data.cities.rajkot.transit_systems.BRT) {
+                    const rjktBRT = data.cities.rajkot.transit_systems.BRT;
+                    if (rjktBRT.routes) {
+                        const uniqueRjktRoutes = new Map();
+                        rjktBRT.routes.forEach(route => {
+                            if (route.Origin_Stop && route.Destination_Stop) {
+                                const key = route.Bus_Number + '-' + route.Origin_Stop + '-' + route.Destination_Stop;
+                                if (!uniqueRjktRoutes.has(key)) {
+                                    uniqueRjktRoutes.set(key, {
+                                        city: 'rjkt',
+                                        routeCode: route.Bus_Number || 'N/A',
+                                        from: route.Origin_Stop,
+                                        to: route.Destination_Stop,
+                                        type: 'BRT'
+                                    });
+                                }
+                            }
+                        });
+                        uniqueRjktRoutes.forEach(route => allRoutes.push(route));
+                    }
+                }
+
+                // Parse Surat data
+                if (data.cities.surat) {
+                    const srtCity = data.cities.surat;
+                    const systemNames = ['BRT', 'BRT_Clean', 'BRT_Raw'];
+                    systemNames.forEach(systemName => {
+                        if (srtCity.transit_systems[systemName] && srtCity.transit_systems[systemName].routes) {
+                            srtCity.transit_systems[systemName].routes.forEach((route, index) => {
+                                if (route.Origin_Stop && route.Destination_Stop) {
+                                    allRoutes.push({
+                                        city: 'srt',
+                                        routeCode: route.Service_No || route.Service_Type || 'N/A',
+                                        from: route.Origin_Stop,
+                                        to: route.Destination_Stop,
+                                        type: route.Vehicle_Type || 'BRT'
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+                
+                // Display parsed analysis
+                const amdRoutes = allRoutes.filter(r => r.city === 'amd');
+                const rjktRoutes = allRoutes.filter(r => r.city === 'rjkt');
+                const srtRoutes = allRoutes.filter(r => r.city === 'srt');
+                
+                const parsedAnalysis = `
+                    <div class="space-y-3">
+                        <div class="flex justify-between"><span>Total Parsed Routes:</span><span class="font-bold text-green-600">${allRoutes.length}</span></div>
+                        <div class="flex justify-between"><span>Ahmedabad Routes:</span><span class="font-bold text-blue-600">${amdRoutes.length}</span></div>
+                        <div class="flex justify-between"><span>Rajkot Routes:</span><span class="font-bold text-green-600">${rjktRoutes.length}</span></div>
+                        <div class="flex justify-between"><span>Surat Routes:</span><span class="font-bold text-purple-600">${srtRoutes.length}</span></div>
+                        <hr>
+                        <div class="text-sm text-gray-600">
+                            <div>AMTS Routes: ${allRoutes.filter(r => r.type === 'AMTS').length}</div>
+                            <div>BRT Routes: ${allRoutes.filter(r => r.type === 'BRT' || r.type === 'BRTS').length}</div>
+                            <div>City Bus Routes: ${allRoutes.filter(r => r.type === 'City').length}</div>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('parsed-analysis').innerHTML = parsedAnalysis;
+                
+                // Display sample routes
+                const sampleRoutes = allRoutes.slice(0, 10);
+                const sampleHTML = sampleRoutes.map((route, index) => 
+                    `<div class="py-2 border-b border-gray-100">
+                        <strong>${index + 1}. ${route.routeCode}</strong> (${route.type}) - 
+                        <span class="text-gray-600">${route.from} → ${route.to}</span>
+                        <span class="ml-2 px-2 py-1 text-xs rounded bg-gray-100">${route.city.toUpperCase()}</span>
+                    </div>`
+                ).join('');
+                
+                document.getElementById('sample-routes').innerHTML = sampleHTML;
+                
+            } catch (error) {
+                document.getElementById('json-analysis').innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                document.getElementById('parsed-analysis').innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+            }
+        }
+        
+        analyzeRoutes();
+    </script>
+</body>
+</html>
