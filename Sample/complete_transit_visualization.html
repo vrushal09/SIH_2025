@@ -291,6 +291,11 @@
         let allRoutes = [];
         let visibleCities = ['amd', 'rjkt', 'srt'];
         let infoWindow;
+        let directionsService;
+        let directionsRenderer;
+        let currentSelectedRoute = null;
+        let routeStationMarkers = [];
+        let routePolyline = null;
 
         // City configuration with precise coordinates
         const cityConfig = {
@@ -340,6 +345,18 @@
 
             // Initialize info window
             infoWindow = new google.maps.InfoWindow();
+
+            // Initialize directions service and renderer
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer({
+                suppressMarkers: true, // We'll add our own markers
+                polylineOptions: {
+                    strokeColor: '#FF0000',
+                    strokeWeight: 4,
+                    strokeOpacity: 0.8
+                }
+            });
+            directionsRenderer.setMap(map);
 
             // Create city markers
             createCityMarkers();
