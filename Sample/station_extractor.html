@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Coordinate Extractor - Gujarat Transit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .log-output {
+            background: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .station-item {
+            transition: all 0.3s ease;
+        }
+        .station-item:hover {
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-6 py-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
+            🗺️ Station Coordinate Extractor
+        </h1>
+        <p class="text-center text-gray-600 mb-8">
+            Extract ALL station coordinates from Gujarat Transit Data
+        </p>
+
+        <!-- Controls -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button onclick="loadAndExtractStations()" 
+                        class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-semibold">
+                    📊 Extract All Stations
+                </button>
+                <button onclick="geocodeAllStations()" 
+                        class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold">
+                    🌐 Geocode Missing Coordinates
+                </button>
+                <button onclick="exportData('csv')" 
+                        class="px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 font-semibold">
+                    📊 Export CSV
+                </button>
+                <button onclick="exportData('geojson')" 
+                        class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 font-semibold">
+                    🗺️ Export GeoJSON
+                </button>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div id="progress-section" class="bg-white rounded-lg shadow-lg p-6 mb-8" style="display: none;">
+            <h3 class="text-lg font-semibold mb-4">📈 Progress</h3>
+            <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+                <div id="progress-bar" class="bg-blue-500 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+            <p id="progress-text" class="text-gray-600 text-center">Ready to start...</p>
+        </div>
+
+        <!-- Statistics -->
+        <div id="stats-section" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" style="display: none;">
+            <div class="bg-blue-500 text-white rounded-lg p-6">
+                <h3 class="text-lg font-semibold">Total Stations</h3>
+                <p id="total-stations" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="bg-green-500 text-white rounded-lg p-6">
+                <h3 class="text-lg font-semibold">With Coordinates</h3>
+                <p id="with-coords" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="bg-orange-500 text-white rounded-lg p-6">
+                <h3 class="text-lg font-semibold">Need Geocoding</h3>
+                <p id="need-geocoding" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="bg-purple-500 text-white rounded-lg p-6">
+                <h3 class="text-lg font-semibold">Coverage</h3>
+                <p id="coverage" class="text-3xl font-bold">0%</p>
+            </div>
+        </div>
+
+        <!-- Station Lists -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Ahmedabad Stations -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">🏢 Ahmedabad Stations</h3>
+                <div id="amd-stations" class="space-y-2 max-h-96 overflow-y-auto">
+                    <p class="text-gray-500">Click "Extract All Stations" to load data</p>
+                </div>
+            </div>
+
+            <!-- Rajkot Stations -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">🌆 Rajkot Stations</h3>
+                <div id="rjkt-stations" class="space-y-2 max-h-96 overflow-y-auto">
+                    <p class="text-gray-500">Click "Extract All Stations" to load data</p>
+                </div>
+            </div>
+
+            <!-- Surat Stations -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-purple-600 mb-4">🏭 Surat Stations</h3>
+                <div id="srt-stations" class="space-y-2 max-h-96 overflow-y-auto">
+                    <p class="text-gray-500">Click "Extract All Stations" to load data</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Log Output -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-4">📋 Extraction Log</h3>
+            <div id="log-output" class="log-output p-4 rounded border text-sm h-64">
+                System ready. Click "Extract All Stations" to begin...<br>
+            </div>
+        </div>
+    </div>
+
+    <script src="station_extractor.js"></script>
+    <script>
+        let extractor = new StationCoordinateExtractor();
+        let unifiedTransitData = null;
+        let allStationsData = null;
+
+        function log(message) {
+            const logOutput = document.getElementById('log-output');
+            const timestamp = new Date().toLocaleTimeString();
+            logOutput.innerHTML += `[${timestamp}] ${message}<br>`;
+            logOutput.scrollTop = logOutput.scrollHeight;
+        }
+
+        function updateProgress(percent, message) {
+            document.getElementById('progress-section').style.display = 'block';
+            document.getElementById('progress-bar').style.width = percent + '%';
+            document.getElementById('progress-text').textContent = message;
+        }
+
+        async function loadAndExtractStations() {
+            try {
+                log('🔄 Loading unified transit data...');
+                updateProgress(10, 'Loading transit data...');
+
+                const response = await fetch('unified_transit_data.json');
+                unifiedTransitData = await response.json();
+                
+                log('✅ Transit data loaded successfully');
+                updateProgress(30, 'Extracting stations...');
+
+                // Extract all stations
+                allStationsData = extractor.extractAllStations(unifiedTransitData);
+                
+                log(`📊 Found ${allStationsData.totalStations} unique stations`);
+                updateProgress(60, 'Generating coordinate database...');
+
+                // Generate complete coordinate database
+                await extractor.generateCompleteCoordinateDatabase();
+                
+                log('🗺️ Coordinate database generated');
+                updateProgress(80, 'Updating interface...');
+
+                // Update UI
+                updateStationLists();
+                updateStatistics();
+                
+                updateProgress(100, 'Extraction complete!');
+                log('🎉 Station extraction completed successfully!');
+
+            } catch (error) {
+                log(`❌ Error: ${error.message}`);
+                console.error('Extraction error:', error);
+            }
+        }
+
+        function updateStationLists() {
+            Object.entries(allStationsData.stationsByCity).forEach(([cityCode, data]) => {
+                const containerId = cityCode.toLowerCase() + '-stations';
+                const container = document.getElementById(containerId);
+                
+                if (!container) return;
+
+                const coords = extractor.coordinateDatabase[cityCode] || {};
+                const html = data.stations.map(station => {
+                    const hasCoords = coords[station];
+                    const iconColor = hasCoords ? 'text-green-500' : 'text-red-500';
+                    const icon = hasCoords ? '📍' : '❓';
+                    
+                    return `
+                        <div class="station-item flex items-center justify-between p-2 border rounded">
+                            <span class="text-sm">${station}</span>
+                            <span class="${iconColor}">${icon}</span>
+                        </div>
+                    `;
+                }).join('');
+                
+                container.innerHTML = html;
+            });
+        }
+
+        function updateStatistics() {
+            const totalStations = allStationsData.totalStations;
+            const withCoords = Object.values(extractor.coordinateDatabase)
+                .reduce((sum, city) => sum + Object.keys(city).length, 0);
+            const needGeocoding = totalStations - withCoords;
+            const coverage = Math.round((withCoords / totalStations) * 100);
+
+            document.getElementById('total-stations').textContent = totalStations;
+            document.getElementById('with-coords').textContent = withCoords;
+            document.getElementById('need-geocoding').textContent = needGeocoding;
+            document.getElementById('coverage').textContent = coverage + '%';
+            
+            document.getElementById('stats-section').style.display = 'grid';
+
+            log(`📈 Statistics: ${withCoords}/${totalStations} stations have coordinates (${coverage}%)`);
+        }
+
+        async function geocodeAllStations() {
+            if (!allStationsData) {
+                log('❌ Please extract stations first');
+                return;
+            }
+
+            log('🌐 Starting geocoding process...');
+            updateProgress(0, 'Initializing geocoding...');
+
+            const totalToGeocode = [];
+            Object.entries(allStationsData.stationsByCity).forEach(([cityCode, data]) => {
+                const coords = extractor.coordinateDatabase[cityCode] || {};
+                data.stations.forEach(station => {
+                    if (!coords[station]) {
+                        totalToGeocode.push({ station, cityCode });
+                    }
+                });
+            });
+
+            log(`🎯 Found ${totalToGeocode.length} stations needing geocoding`);
+
+            if (totalToGeocode.length === 0) {
+                log('✅ All stations already have coordinates!');
+                return;
+            }
+
+            // Note: This would require Google Maps API key and proper implementation
+            log('⚠️ Geocoding requires Google Maps API key');
+            log('💡 Suggestion: Use the manual coordinate database or implement Google Maps geocoding');
+            
+            updateProgress(100, 'Geocoding setup complete');
+        }
+
+        function exportData(format) {
+            if (!allStationsData) {
+                log('❌ Please extract stations first');
+                return;
+            }
+
+            try {
+                const exportedData = extractor.exportStationData(format);
+                const timestamp = new Date().toISOString().split('T')[0];
+                const filename = `gujarat_transit_stations_${timestamp}.${format}`;
+
+                const blob = new Blob([exportedData], { 
+                    type: format === 'json' ? 'application/json' : 'text/plain' 
+                });
+                
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                log(`📁 Exported data as ${filename}`);
+
+            } catch (error) {
+                log(`❌ Export error: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>
